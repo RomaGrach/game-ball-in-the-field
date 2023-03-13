@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{B06B8900-00E7-2009-124C-D33F77AE0588}|">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainMenueController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/CreateObjeckts.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MainMenueController.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="YandeksStartProjecktCyrklDesk" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a3bb8d26-47b0-42c1-ab4d-e38ab48395ca" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
