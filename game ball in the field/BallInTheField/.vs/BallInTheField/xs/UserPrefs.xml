@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{9DCEF274-9F8A-855A-1D7E-62958C1E3F42}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BollGenerater.cs">
+    <Files>
+      <File FileName="Assets/Scripts/cubeDestroy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MainMenueController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CreateObjeckts.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BollGenerater.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BallInTheField" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="BollGenerater.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dbff9bd7-beb9-41e1-a33f-2684e55596da" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
