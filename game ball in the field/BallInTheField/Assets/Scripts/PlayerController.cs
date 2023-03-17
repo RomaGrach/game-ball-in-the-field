@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI TimeText;
     private int _score = 0;
-    private float _time = 30.0f;
+    public float _time = 30.0f;
     public GameObject obj;
     public GameObject _defText;
     public GameObject _ReturnMenuButton;
