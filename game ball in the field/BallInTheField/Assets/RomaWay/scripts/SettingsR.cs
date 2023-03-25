@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using static PlayerMoveForse;
 
 public class SettingsR : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class SettingsR : MonoBehaviour
     public PlayerMoveForse _playerMove;
     bool girascop = false;
     [SerializeField] private TextMeshProUGUI _text_aksilirometr_settings;
+    [SerializeField] private TextMeshProUGUI _ControlType_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,5 +52,24 @@ public class SettingsR : MonoBehaviour
             _playerMove.change_game_mode_acceleration(girascop);
             _text_aksilirometr_settings.text = " Аксилирометр - Включен.";
         }
+    }
+    public void ControlType()
+    {
+        if (_playerMove.controlType == PlayerMoveForse.ControlType.PC)
+        {
+            _playerMove.controlType = PlayerMoveForse.ControlType.Android;
+            _ControlType_text.text = " ControlType = Android.";
+            _playerMove._joystick.gameObject.SetActive(true);
+        }
+        else if (_playerMove.controlType == PlayerMoveForse.ControlType.Android)
+        {
+            _playerMove.controlType = PlayerMoveForse.ControlType.PC;
+            _ControlType_text.text = " ControlType = PC.";
+            _playerMove._joystick.gameObject.SetActive(false);
+        }
+    }
+    public void leaveToMenue()
+    {
+        SceneManager.LoadScene(0);
     }
 }

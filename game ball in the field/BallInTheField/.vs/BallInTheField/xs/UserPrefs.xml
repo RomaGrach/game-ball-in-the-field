@@ -1,21 +1,33 @@
 ﻿<Properties StartupConfiguration="{9DCEF274-9F8A-855A-1D7E-62958C1E3F42}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4725351f-01fd-4c0f-8d27-c72e78b53f15" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BollGenerater.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Roma/cameraMove.cs">
     <Files>
-      <File FileName="Assets/Scripts/cubeDestroy.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/cubeDestroy.cs" />
       <File FileName="Assets/Scripts/MainMenueController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="19" Column="40" />
       <File FileName="Assets/Scripts/CreateObjeckts.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BollGenerater.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BollGenerater.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/Roma/playerMove.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scripts/Roma/cameraMove.cs" Line="19" Column="75" />
+      <File FileName="Assets/RomaWay/scripts/PlayerMoveForse.cs" Line="15" Column="41" />
+      <File FileName="Assets/RomaWay/scripts/SettingsR.cs" Line="9" Column="21" />
+      <File FileName="Assets/RomaWay/scripts/staticMove.cs" Line="45" Column="50" />
+      <File FileName="Assets/RomaWay/scripts/DieTime.cs" Line="24" Column="18" />
+      <File FileName="Assets/RomaWay/scripts/GeneratorJampBollsForStartMenue.cs" Line="8" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="BallInTheField" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="RomaWay" expanded="True">
+                <Node name="scripts" expanded="True" />
+              </Node>
               <Node name="Scripts" expanded="True">
-                <Node name="BollGenerater.cs" selected="True" />
+                <Node name="Roma" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -23,8 +35,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dbff9bd7-beb9-41e1-a33f-2684e55596da" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
