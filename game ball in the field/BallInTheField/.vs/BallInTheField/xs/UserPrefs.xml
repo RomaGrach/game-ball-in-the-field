@@ -3,20 +3,22 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Roma/cameraMove.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RomaWay/scripts/bigCubeMove.cs">
     <Files>
       <File FileName="Assets/Scripts/cubeDestroy.cs" />
       <File FileName="Assets/Scripts/MainMenueController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="19" Column="40" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="90" Column="35" />
       <File FileName="Assets/Scripts/CreateObjeckts.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BollGenerater.cs" Line="8" Column="1" />
       <File FileName="Assets/Scripts/Roma/playerMove.cs" Line="4" Column="1" />
       <File FileName="Assets/Scripts/Roma/cameraMove.cs" Line="19" Column="75" />
-      <File FileName="Assets/RomaWay/scripts/PlayerMoveForse.cs" Line="15" Column="41" />
-      <File FileName="Assets/RomaWay/scripts/SettingsR.cs" Line="9" Column="21" />
+      <File FileName="Assets/RomaWay/scripts/PlayerMoveForse.cs" Line="55" Column="10" />
+      <File FileName="Assets/RomaWay/scripts/SettingsR.cs" Line="73" Column="35" />
       <File FileName="Assets/RomaWay/scripts/staticMove.cs" Line="45" Column="50" />
       <File FileName="Assets/RomaWay/scripts/DieTime.cs" Line="24" Column="18" />
       <File FileName="Assets/RomaWay/scripts/GeneratorJampBollsForStartMenue.cs" Line="8" Column="35" />
+      <File FileName="Assets/RomaWay/scripts/openLevel.cs" Line="21" Column="33" />
+      <File FileName="Assets/RomaWay/scripts/bigCubeMove.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,9 +28,7 @@
               <Node name="RomaWay" expanded="True">
                 <Node name="scripts" expanded="True" />
               </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="Roma" expanded="True" />
-              </Node>
+              <Node name="Scripts" expanded="True" />
             </Node>
           </Node>
         </State>
