@@ -21,6 +21,7 @@ public class SlopeSliderV2 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (FindAnyObjectByType<GameManager>().GetComponent<gameStart>().Gstart) { 
         float rotx = transform.rotation.x + AmplitudeX * Mathf.Sin(10*deltaT);
         float roty = transform.rotation.y + AmplitudeY;
         float rotz = transform.rotation.z + AmplitudeZ * Mathf.Sin(10*deltaT);
@@ -44,6 +45,7 @@ public class SlopeSliderV2 : MonoBehaviour
         }
         deltaT += ultraT;
 
-        //AmplitudeZ += deltaT;
+            //AmplitudeZ += deltaT;
+        }
     }
 }
