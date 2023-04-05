@@ -1326,7 +1326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049747657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -60, y: -200, z: -60}
+  m_LocalPosition: {x: -220, y: -200, z: -120}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1646,7 +1646,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 70
+  far clip plane: 300
   field of view: 60.10523
   orthographic: 0
   orthographic size: 5
@@ -7261,6 +7261,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8911774395365033644, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911774395365033644, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
       propertyPath: m_ReceiveGI
       value: 1
       objectReference: {fileID: 0}
@@ -7289,7 +7293,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8911774395885575333, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911774395885575333, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
       propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911774396178572720, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8911774396178572720, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
@@ -7303,6 +7315,10 @@ PrefabInstance:
     - target: {fileID: 8911774396178572735, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
       propertyPath: m_Convex
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911774396178572735, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8911774396991861612, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
       propertyPath: m_Name
@@ -7370,7 +7386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8911774397031969206, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8911774397031969207, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
       propertyPath: m_Enabled
