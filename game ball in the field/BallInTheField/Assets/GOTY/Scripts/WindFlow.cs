@@ -13,6 +13,10 @@ public class WindFlow : MonoBehaviour
             if (Random.value > 0.8)
             {
                 dice = Random.Range(1f, 4f);
+                if (dice < 2)
+                {
+                    FindObjectsByType<Transform>()
+                }
                // if (dice < 2f) 
 
             }
