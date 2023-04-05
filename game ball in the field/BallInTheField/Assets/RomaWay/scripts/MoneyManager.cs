@@ -15,7 +15,7 @@ public class MoneyManager : MonoBehaviour
     // Update is called once per frame
     public void SetMoney(int money)
     {
-        Progress.Instance.Coins += money;
+        Progress.Instance.abdateCoin(money);
         ApdateMoneyText();
     }
 

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/RomaWay/ScenesR/startMenue.unity
     guid: 25ff034fc0d38421c81c4de686be10bb
   - enabled: 1
-    path: Assets/RomaWay/ScenesR/level1.unity
+    path: Assets/RomaWay/ScenesR/level1_test.unity
     guid: d0e31e0318b024b509abc8dc9c5c8e8a
   - enabled: 1
     path: Assets/Scenes/MainMenue.unity
