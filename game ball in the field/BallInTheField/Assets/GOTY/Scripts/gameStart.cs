@@ -20,6 +20,7 @@ public class gameStart : MonoBehaviour
         GetComponent<TimeChanger>().enabled = true;
         //player scripts
         FindAnyObjectByType<WindFlow>().enabled = true;
+        FindAnyObjectByType<ParticleSystem>().Play();
         FindAnyObjectByType<ConstantForce>().enabled = true;
         FindAnyObjectByType<PlayerMoveForse>().enabled = true;
         //platform scripts
