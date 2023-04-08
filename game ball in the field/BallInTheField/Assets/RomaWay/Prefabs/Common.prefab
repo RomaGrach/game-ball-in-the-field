@@ -35,10 +35,10 @@ RectTransform:
   m_Father: {fileID: 7502659007236269500}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -866.6667}
-  m_SizeDelta: {x: 820, y: 226.66667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7502659006144568578
 CanvasRenderer:
@@ -234,7 +234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2aa8b7b63b043f6ae6525adbaff2c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 18
+  Coins: 0
+  LevelsProgress: 00000000
 --- !u!1 &7502659006754584757
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,9 +302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'upravlenie
-
-'
+  m_text: Control Type - PC
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -330,13 +329,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 80
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 80
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -542,10 +541,10 @@ RectTransform:
   m_Father: {fileID: 7502659007236269500}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -540}
-  m_SizeDelta: {x: 820, y: 226.66667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7502659006890055638
 CanvasRenderer:
@@ -657,17 +656,17 @@ RectTransform:
   m_GameObject: {fileID: 7502659006974903682}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7502659007509115709}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.87000006, y: 0.7782394}
-  m_AnchorMax: {x: 0.96400005, y: 0.9503616}
-  m_AnchoredPosition: {x: -14, y: -15}
-  m_SizeDelta: {x: 332, y: 325}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.90227073, y: 0.8311482}
+  m_AnchorMax: {x: 0.9822083, y: 0.9727778}
+  m_AnchoredPosition: {x: 0.5, y: 0.49999988}
+  m_SizeDelta: {x: 359, y: 358}
+  m_Pivot: {x: 0.5, y: 0.5000001}
 --- !u!222 &7502659006974903694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -949,6 +948,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nastroykiMenue: {fileID: 7502659007236269491}
+  _text_ControlTipeButton: {fileID: 7502659006754584759}
+  _playerUIController: {fileID: 0}
 --- !u!1 &7502659007509115708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,13 +1327,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 80
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 80
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1403,10 +1404,10 @@ RectTransform:
   m_Father: {fileID: 7502659007236269500}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -213.33334}
-  m_SizeDelta: {x: 820, y: 226.66667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7502659007862185815
 CanvasRenderer:
@@ -1489,7 +1490,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7502659007862185814}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7502659007485012671}
+        m_TargetAssemblyTypeName: UIStatic, Assembly-CSharp
+        m_MethodName: ControlTipeChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &7502659007877845865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,13 +1596,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 80
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 80
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

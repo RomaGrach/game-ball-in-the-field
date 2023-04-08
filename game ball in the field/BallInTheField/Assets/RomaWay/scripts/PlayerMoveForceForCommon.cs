@@ -31,4 +31,16 @@ public class PlayerMoveForceForCommon : MonoBehaviour
         }
         _rb.AddForce(new Vector3(h, 0, v).normalized * _speed * Time.fixedDeltaTime);
     }
+
+    public void ChangeControlTypePhone(bool a)
+    {
+        if (a)
+        {
+            controlType = ControlType.Android;
+        }
+        else
+        {
+            controlType = ControlType.PC;
+        }
+    }
 }
