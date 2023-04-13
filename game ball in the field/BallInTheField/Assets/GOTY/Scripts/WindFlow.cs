@@ -18,7 +18,7 @@ public class WindFlow : MonoBehaviour
 
         Anchor = GameObject.Find("ParticleAnchor");
 
-        GetComponent<ConstantForce>().force = new Vector3(0, 0, windStrength);
+        GetComponent<ConstantForce>().torque = new Vector3(windStrength, 0, 0);
     }
     void FixedUpdate()
     {
@@ -38,7 +38,7 @@ public class WindFlow : MonoBehaviour
                         {
                             Anchor.GetComponent<Transform>().rotation = Quaternion.Euler(0, 90, 0);
 
-                            GetComponent<ConstantForce>().force = new Vector3(randWind, 0,0);
+                            GetComponent<ConstantForce>().torque = new Vector3(0, 0, -randWind);
    
                             PointT.rotation = Quaternion.Euler(-35, 0, 0);
                             PointT.localPosition = new Vector3(0, 0, 5);
@@ -48,7 +48,7 @@ public class WindFlow : MonoBehaviour
                         {
                             Anchor.GetComponent<Transform>().rotation = Quaternion.Euler(0, 270, 0);
 
-                            GetComponent<ConstantForce>().force = new Vector3(-randWind, 0, 0);
+                            GetComponent<ConstantForce>().torque = new Vector3(0, 0, randWind);
 
                             PointT.rotation = Quaternion.Euler(-35, 0, 180);
                             PointT.localPosition = new Vector3(0, 0, 5);
@@ -58,7 +58,7 @@ public class WindFlow : MonoBehaviour
                         {
                             Anchor.GetComponent<Transform>().rotation = Quaternion.Euler(0, 180, 0);
 
-                            GetComponent<ConstantForce>().force = new Vector3(0, 0, -randWind);
+                            GetComponent<ConstantForce>().torque = new Vector3(-randWind, 0, 0);
 
                             PointT.rotation = Quaternion.Euler(0, 90, -35);
                             PointT.localPosition = new Vector3(0, 0, 6);
@@ -68,7 +68,7 @@ public class WindFlow : MonoBehaviour
                         {
                             Anchor.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
 
-                            GetComponent<ConstantForce>().force = new Vector3(0, 0, randWind);
+                            GetComponent<ConstantForce>().torque = new Vector3(randWind, 0, 0);
 
                             PointT.rotation = Quaternion.Euler(0, 270, 35);
                             PointT.localPosition = new Vector3(0, 0, 6);
