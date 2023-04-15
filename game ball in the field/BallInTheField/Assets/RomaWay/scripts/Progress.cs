@@ -4,20 +4,33 @@ using UnityEngine;
 using System.Linq;
 using System;
 
+[System.Serializable]
+public class LevelsProgresSever
+{
+    [SerializeField] public bool[] LevelsProgres;
+    [SerializeField] public int[] LevelsScore;
+    public LevelsProgresSever()
+    {
+        LevelsProgres = new bool[] { false, false, false, false, false };
+        LevelsScore = new int[] { 0, 0, 0, 0, 0 };
+    }
+}
+
 public class Progress : MonoBehaviour
 {
+
     public int Coins;
-    public List<List<int>> intList;
-    //public List<int> intList1 = new List<int>(intList[0]);
-    public int[,] LevelsProgress = new int[1,2] { { 1, 0 } }; // первое пройден/не пройден   второе прогрес
     public Material materialNow;
+    [SerializeField] public LevelsProgresSever _LPS;
+    public bool[] LevelsProgres = new bool[] { false, false, false, false, false };
+    public int[] LevelsScore = new int[] { 0, 0, 0, 0, 0 };
     public List<Material> materialsListBuyed;
-    public int[] myArray11 = new int[] { 1, 2, 3, 4, 5 };
 
     public static Progress Instance;
 
     private void Awake()
     {
+        PlayerPrefs.DeleteAll();
         if (Instance == null)
         {
             transform.parent = null;
@@ -29,24 +42,6 @@ public class Progress : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (PlayerPrefs.HasKey("myArray"))
-        {
-            string json = PlayerPrefs.GetString("myArray");
-
-            // десериализуем строку JSON в массив
-            myArray11 = JsonUtility.FromJson<int[]>(json);
-
-            Debug.Log("1");
-        }
-        else
-        {
-            // сериализуем массив в строку JSON
-            string json = JsonUtility.ToJson(myArray11, true);
-
-            // сохраняем строку в PlayerPrefs
-            PlayerPrefs.SetString("myArray", json);
-        }
-
         if (PlayerPrefs.HasKey("score"))
         {
             Coins = PlayerPrefs.GetInt("score");
@@ -56,30 +51,65 @@ public class Progress : MonoBehaviour
             PlayerPrefs.SetInt("score", Coins);
         }
 
-        if (PlayerPrefs.HasKey("IntList"))
+        if (PlayerPrefs.HasKey("LPS"))
         {
-            string savedJson = PlayerPrefs.GetString("IntList");
-            IntListWrapper savedWrapper = JsonUtility.FromJson<IntListWrapper>(savedJson);
-            if (savedWrapper.items != null)
-            {
-                intList = savedWrapper.items;
-            }
-            Debug.Log("1");
+            /*
+            string LoadedString = PlayerPrefs.GetString("LevelsScore");
+            Debug.Log(LoadedString);
+            Debug.Log("2");
+            LevelsScore = JsonUtility.FromJson<int[]>(LoadedString);
+            JsonUtility.FromJson<T>(LoadedString);
+            Debug.Log(string.Join(",", LevelsScore));
+            */
+
+            string LoadedString = PlayerPrefs.GetString("LPS");
+            var data = JsonUtility.FromJson<LevelsProgresSever>(LoadedString);
+            LevelsScore = data.LevelsScore;
+            LevelsProgres = data.LevelsProgres;
         }
         else
         {
-            // Преобразование списка в JSON и сохранение в PlayerPrefs
-            string jsonString = JsonUtility.ToJson(new IntListWrapper { items = intList });
-            PlayerPrefs.SetString("IntList", jsonString);
-            Debug.Log("2");
+            Save_LPS();
         }
-        if (intList == null)
-        {
 
-            intList = new List<List<int>> { new List<int> { 0, 0 } };
-        }
-        //intList = new List<List<int>> { new List<int> { 2, 1 } };
-        Debug.Log("intList: " + string.Join(", ", intList.Select(l => "[" + string.Join(", ", l) + "]").ToArray()));
+
+    }
+    /*
+    public void Save_LevelsProgres()
+    {
+        _LPS.LevelsProgres = LevelsProgres;
+        string jsonDataString = JsonUtility.ToJson(_LPS, true);
+        PlayerPrefs.SetString("LevelsProgres", jsonDataString);
+    }
+    */
+    public void Save_LPS()
+    {
+        _LPS.LevelsScore = LevelsScore;
+        _LPS.LevelsProgres = LevelsProgres;
+        string jsonDataString = JsonUtility.ToJson(_LPS, true);
+        Debug.Log(jsonDataString + "-----");
+        PlayerPrefs.SetString("LPS", jsonDataString);
+    }
+
+    /*
+    public void Save_LevelsScore()
+    {
+
+        _LPS.LevelsScore = LevelsScore;
+        Debug.Log(string.Join(",", _LPS.LevelsScore));
+        string jsonDataString = JsonUtility.ToJson(_LPS, true);
+        Debug.Log(jsonDataString+"-----");
+        PlayerPrefs.SetString("LevelsScore", jsonDataString);
+        //SaveManager.Save("LevelsScore", _MyStruct);
+        //var data = SaveManager.Load<MyStruct>("LevelsScore");
+        //Debug.Log("-----");
+        //Debug.Log(string.Join(",", data.LevelsScore));
+    }
+    */
+    public void abdateCoin(int number)
+    {
+        Coins += number;
+        PlayerPrefs.SetInt("score", Coins);
     }
     /*
     public void SavedLavels()
@@ -91,73 +121,4 @@ public class Progress : MonoBehaviour
         PrintSavedLavels();
     }
     */
-    public void SavedMyArrey()
-    {
-        // сериализуем массив в строку JSON
-        string json = JsonUtility.ToJson(myArray11, true);
-
-        // сохраняем строку в PlayerPrefs
-        PlayerPrefs.SetString("myArray", json);
-        Debug.Log("1rgtgt");
-        PrintSavedMyArrey();
-    }
-
-    public void PrintSavedMyArrey()
-    {
-        string json = PlayerPrefs.GetString("myArray");
-
-        // десериализуем строку JSON в массив
-        myArray11 = JsonUtility.FromJson<int[]>(json);
-
-        for (int i = 0; i < myArray11.Length; i++)
-        {
-            Debug.Log(myArray11[i]);
-        }
-    }
-
-
-    public void SavedLavels()
-    {
-        // Если список intList пустой, то создаем в нем хотя бы один элемент для сохранения
-        if (intList.Count == 0)
-        {
-            intList.Add(new List<int> { 0, 0 });
-        }
-
-        // Преобразование списка в JSON и сохранение в PlayerPrefs
-        string jsonString = JsonUtility.ToJson(new IntListWrapper { items = intList });
-        PlayerPrefs.SetString("IntList", jsonString);
-        PlayerPrefs.Save(); // сохраняем изменения
-        Debug.Log("intList: " + string.Join(", ", intList.Select(l => "[" + string.Join(", ", l) + "]").ToArray()));
-        PrintSavedLavels();
-    }
-
-    public void PrintSavedLavels()
-    {
-        Debug.Log("fff");
-        string savedJson = PlayerPrefs.GetString("IntList");
-        IntListWrapper savedWrapper = JsonUtility.FromJson<IntListWrapper>(savedJson);
-        if (savedWrapper.items != null)
-        {
-            intList = savedWrapper.items;
-            Debug.Log("intList: " + string.Join(", ", intList.Select(l => "[" + string.Join(", ", l) + "]").ToArray()));
-        }
-        else
-        {
-            Debug.Log("yyyy");
-        }
-    }
-
-    public void abdateCoin(int number)
-    {
-        Coins += number;
-        PlayerPrefs.SetInt("score", Coins);
-    }
-
-    [Serializable]
-    public class IntListWrapper
-    {
-        public List<List<int>> items;
-    }
-
 }

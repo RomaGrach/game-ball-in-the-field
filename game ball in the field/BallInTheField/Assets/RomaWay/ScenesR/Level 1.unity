@@ -2028,8 +2028,8 @@ MonoBehaviour:
   SoberText: {fileID: 606565301}
   _GameManager: {fileID: 942404590}
   _sobrano: 0
-  _sobranoNujno: 15
-  _time: 30
+  _sobranoNujno: 1
+  _time: 0
 --- !u!4 &1229802467
 Transform:
   m_ObjectHideFlags: 0
@@ -2172,6 +2172,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7502659006144568583, guid: 8ed9cab3b699d484e842eb6c0f2fd737, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502659006612203945, guid: 8ed9cab3b699d484e842eb6c0f2fd737, type: 3}
+      propertyPath: _LPS.LevelsScore.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502659006612203945, guid: 8ed9cab3b699d484e842eb6c0f2fd737, type: 3}
+      propertyPath: _LPS.LevelsScore.Array.data[1]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7502659006890055467, guid: 8ed9cab3b699d484e842eb6c0f2fd737, type: 3}
