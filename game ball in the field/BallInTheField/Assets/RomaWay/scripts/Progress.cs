@@ -20,7 +20,8 @@ public class Progress : MonoBehaviour
 {
 
     public int Coins;
-    public Material materialNow;
+    public int SkinIndeks = 0;
+    //public Material materialNow;
     [SerializeField] public LevelsProgresSever _LPS;
     public bool[] LevelsProgres = new bool[] { false, false, false, false, false };
     public int[] LevelsScore = new int[] { 0, 0, 0, 0, 0 };
@@ -30,7 +31,7 @@ public class Progress : MonoBehaviour
 
     private void Awake()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         if (Instance == null)
         {
             transform.parent = null;
@@ -49,6 +50,15 @@ public class Progress : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("score", Coins);
+        }
+
+        if (PlayerPrefs.HasKey("skin"))
+        {
+            SkinIndeks = PlayerPrefs.GetInt("skin");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("skin", SkinIndeks);
         }
 
         if (PlayerPrefs.HasKey("LPS"))
@@ -110,6 +120,10 @@ public class Progress : MonoBehaviour
     {
         Coins += number;
         PlayerPrefs.SetInt("score", Coins);
+    }
+    public void ChangeSkinIndeks()
+    {
+        PlayerPrefs.SetInt("skin", SkinIndeks);
     }
     /*
     public void SavedLavels()

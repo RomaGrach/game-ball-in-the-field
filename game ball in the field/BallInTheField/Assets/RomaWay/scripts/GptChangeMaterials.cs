@@ -1,12 +1,17 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class GptChangeMaterials : MonoBehaviour
 {
     public List<Material> materialsList;
     public List<GameObject> objectsList;
-    private int[] currentMaterialIndices;
+    public int[] currentMaterialIndices;
 
+    private void Awake()
+    {
+        materialsList = Progress.Instance.materialsListBuyed;
+    }
     void Start()
     {
         int numObjects = objectsList.Count;
@@ -40,4 +45,11 @@ public class GptChangeMaterials : MonoBehaviour
             renderer.material = materialsList[currentMaterialIndices[i]];
         }
     }
+    
+    public void SetSkinPlayer()
+    {
+        Progress.Instance.SkinIndeks = currentMaterialIndices[1];
+        Progress.Instance.ChangeSkinIndeks();
+    }
+    
 }

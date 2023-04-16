@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneControllerLevel1 : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class SceneControllerLevel1 : MonoBehaviour
         //NowSkore.text = "Текущие время: " + _time.ToString();
         //BeastSkore.text = "Лучшие время: " + Progress.Instance.LevelsScore[0].ToString();
         GameSchet();
-        GameUslovie.text = "Собери: 15 кубов";
+        GameUslovie.text = "Собери: " + _sobranoNujno.ToString() + " кубов";
         Time.timeScale = 0;
 
     }
@@ -69,7 +70,7 @@ public class SceneControllerLevel1 : MonoBehaviour
 
     public void NextButtonFunk()
     {
-        _GameManager.GoToLevel(0);
+        _GameManager.LoadNextScene();
     }
 
     public void GameDefeat()
@@ -100,7 +101,7 @@ public class SceneControllerLevel1 : MonoBehaviour
         if (_sobrano == _sobranoNujno)
         {
             GameSchet();
-            Progress.Instance.LevelsProgres[0] = true;
+            Progress.Instance.LevelsProgres[SceneManager.GetActiveScene().buildIndex - 1] = true;
             Progress.Instance.Save_LPS();
             GameWin();
         }

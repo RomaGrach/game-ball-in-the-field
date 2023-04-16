@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0421\u043E\u0431\u0440\u0430\u043D\u043E:  0 / 5\n"
+  m_text: "\u0421\u043E\u0431\u0440\u0430\u043D\u043E:  0 / 10"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1270,7 +1270,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 63.65
+  m_fontSize: 58.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2041,7 +2041,7 @@ MonoBehaviour:
   SoberText: {fileID: 606565301}
   _GameManager: {fileID: 942404590}
   _sobrano: 0
-  _sobranoNujno: 5
+  _sobranoNujno: 10
   _time: 0
 --- !u!4 &1229802467
 Transform:

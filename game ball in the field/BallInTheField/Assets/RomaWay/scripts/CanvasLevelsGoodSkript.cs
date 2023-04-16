@@ -15,34 +15,33 @@ public class CanvasLevelsGoodSkript : MonoBehaviour
     public Button Level4;
     public Button Level5;
     public Button Level6;
-    int s = 2;
     public GameManager _GameManager;
     // Start is called before the first frame update
     void Start()
     {
         if (Progress.Instance.LevelsProgres[0])
         {
-            Level2.interactable = true;
+            Level2.enabled = true;
             Level2im.SetActive(false);
         }
         if (Progress.Instance.LevelsProgres[1])
         {
-            Level3.interactable = true;
+            Level3.enabled = true;
             Level3im.SetActive(false);
         }
         if (Progress.Instance.LevelsProgres[2])
         {
-            Level4.interactable = true;
+            Level4.enabled = true;
             Level4im.SetActive(false);
         }
         if (Progress.Instance.LevelsProgres[3])
         {
-            Level5.interactable = true;
+            Level5.enabled = true;
             Level5im.SetActive(false);
         }
         if (Progress.Instance.LevelsProgres[4])
         {
-            Level6.interactable = true;
+            Level6.enabled = true;
             Level6im.SetActive(false);
         }
 
