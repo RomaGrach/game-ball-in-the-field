@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11502504, g: 0.116807766, b: 0.09792875, a: 1}
+  m_IndirectSpecularColor: {r: 0.11502494, g: 0.11680761, b: 0.097928666, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -773,6 +773,23 @@ MonoBehaviour:
   _buttenGiroscop: {fileID: 815490608}
   _playerMove: {fileID: 0}
   _text_aksilirometr_settings: {fileID: 2070048269}
+--- !u!1 &380865653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8911774397031969205, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
+  m_PrefabInstance: {fileID: 8911774397094997448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &380865658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380865653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c311c0cc4359c6499a2f0d4294d3ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &427761331
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,13 +1016,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491017309}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 2
   m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!114 &491017316
 MonoBehaviour:
@@ -1019,7 +1036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b619ca7b30a164d00b26eb82f31cbfcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 900
+  _speed: 1500
 --- !u!114 &491017317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,8 +1051,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pointer: {fileID: 0}
   Anchor: {fileID: 0}
-  windStrength: 9
-  windStrengthAcc: 0.1
+  windStrength: 50
+  windStrengthAcc: 5
 --- !u!1 &559568693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559568693}
   m_LocalRotation: {x: 0.21263108, y: 0.67437977, z: -0.21263108, w: -0.67437977}
-  m_LocalPosition: {x: 0, y: 0, z: 6}
+  m_LocalPosition: {x: 0, y: -0.84, z: 4.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1635,7 +1652,7 @@ GameObject:
   - component: {fileID: 1243527179}
   - component: {fileID: 1243527181}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: CylinderStage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7568,12 +7585,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8911774397031969097, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4324
+      objectReference: {fileID: 0}
     - target: {fileID: 8911774397031969205, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8911774397031969206, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911774397031969206, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911774397031969206, guid: 4035b824f72eeec489e5a112279fe838, type: 3}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8911774397031969207, guid: 4035b824f72eeec489e5a112279fe838, type: 3}

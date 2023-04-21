@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trigger : MonoBehaviour
+public class StartTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -11,6 +11,6 @@ public class Trigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        FindAnyObjectByType<GameManager>().GetComponent<gameStart>()._Start();
+        if (other.gameObject.name == "Body") FindAnyObjectByType<GameManager>().GetComponent<gameStart>()._Start();
     }
 }
