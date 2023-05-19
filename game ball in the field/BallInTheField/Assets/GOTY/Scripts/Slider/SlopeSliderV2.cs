@@ -22,7 +22,6 @@ public class SlopeSlider : MonoBehaviour
     {
         if (Random.value > 0.5) return X += Mathf.Abs(deltaT);
         else return Z += Mathf.Abs(deltaT);
-
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -49,7 +48,6 @@ public class SlopeSlider : MonoBehaviour
             flag = true;
         }
         deltaT += ultraT;
-
         //AmplitudeZ += deltaT;
     }
 }

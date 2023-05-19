@@ -5,13 +5,8 @@ using UnityEngine;
 public class gameStart : MonoBehaviour
 {
     public bool Gstart = false;
-    private void Update()
-    {
-        
-    }
     private void Start()
-    {
-        
+    {    
     }
     public void _Start()
     {
@@ -25,5 +20,6 @@ public class gameStart : MonoBehaviour
         FindAnyObjectByType<PlayerMoveForse>().enabled = true;
         //platform scripts
         FindAnyObjectByType<SlopeSliderV2>().enabled = true;
+        Debug.Log("Game Is Active!");
     }
 }
